@@ -50,7 +50,7 @@ def getCoordinates(target: Int): Coordinate = {
 
     }
   }
-  getCoordinates(1, 1, start, getNextPairOfMovements(1))
+  getCoordinates(1, 1, start, movementsGenerator(1).toList)
 }
 
 // Part 1
