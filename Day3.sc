@@ -45,7 +45,7 @@ def getCoordinates(target: Int): Coordinate = {
           val movements = movementsGenerator(pass + 1).toList
           getCoordinates(acc + 1, pass + 1, coord.move(movements.head), movements.tail)
         }
-        case x :: xs  => getCoordinates(acc + 1, pass, coord.move(movements.head), movements.tail)
+        case x :: xs  => getCoordinates(acc + 1, pass, coord.move(x), xs)
       }
 
     }
